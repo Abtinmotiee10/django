@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^+v%cm^o65j-2_%kvx4orj6%#@@l0(0%o2!)q$w$@w8j-))28x'
+SECRET_KEY = 'django-insecure-idsn!)3_q4q^*hdzd^1p70(nopt*m^02e)ke64#^vqhb7__1u!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'root',
+    'courses',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -119,12 +121,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 STATIC_ROOT = BASE_DIR/'/static'
-MEDIA_ROOT = BASE_DIR/'/media'
-STATICFILES_DIRS = [
+MEDIA_ROOT = BASE_DIR/'media'
+STATICFILES_DIRS =[
     BASE_DIR/'static',
+    BASE_DIR/'media',
 ]
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

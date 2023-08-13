@@ -1,11 +1,13 @@
 from django.contrib import admin
-from .models import Service
+from .models import Services
+
+# Register your models here.
 
 
-class Adminservice(admin.ModelAdmin):
-    list_display = ['title', 'content','status']
+class AdminServices(admin.ModelAdmin):
+    list_display = ['title','content','status']
     list_filter = ['status']
     search_fields = ['title']
 
-admin.site.register(Service,Adminservice)
-# Register your models here.
+
+admin.site.register(Services,AdminServices)
