@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Service
 
 # Create your views here.
 
@@ -9,7 +10,11 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request,"root/index.html",context={'name':'abtin'})
+    service  = Service.objects.filter(status=True)
+    context = {
+        'services':service
+    }
+    return render(request,"root/index.html",context=context)
 
 def about(request):
     return render(request,"root/about.html")
