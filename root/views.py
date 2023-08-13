@@ -12,7 +12,7 @@ from .models import Service
 def home(request):
     service  = Service.objects.filter(status=True)
     context = {
-        'services':service
+        'services': service
     }
     return render(request,"root/index.html",context=context)
 

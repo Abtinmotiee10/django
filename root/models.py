@@ -5,7 +5,7 @@ class Service(models.Model):
     content = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now = True)
-    _status = models.BooleanField(default=False)
+    status = models.BooleanField(default=False)
 
 
     def __str__(self):
