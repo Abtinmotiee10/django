@@ -62,22 +62,22 @@
 
       </div>
     </section><!-- End Courses Section -->
-    <div align="center" style="font-size:35px;">
-      {% if  courses.has_next and courses.has_previous %}
+    <div align="center" style="font-size:30px;">
+      {% if courses.has_next and courses.has_previous %}
       <a href="?page={{first_page}}"><<</a>
-      <a href="#">....</a>
-      <a href="?page={{courses.previous_page_number}}"><</a>
-      <a href="#">....</a>
+      <a href="#" >{{courses.previous_page_number}}</a>
+      <a href="?page={{courses.previous_page_number}}"><  </a>
+      <a href="#" style="color:rgb(0, 113, 128);font-size:60px" ><active>{{courses.number}}</a>
       <a href="?page={{courses.next_page_number}}">></a>
-      <a href="#">....</a>
+      <a href="#">{{courses.next_page_number}}</a>
       <a href="?page={{last_page}}">>></a>
       {% elif courses.has_next %}
       <a href="?page={{courses.next_page_number}}">></a>
-      <a href="#">....</a>
+      <a href="#">{{courses.number}}</a>
       <a href="?page={{last_page}}">>></a>
       {% elif courses.has_previous %}
       <a href="?page={{first_page}}"><<</a>
-      <a href="#">....</a>
+      <a href="#">{{courses.number}}</a>
       <a href="?page={{courses.previous_page_number}}"><  </a>
       {% endif %}
 
