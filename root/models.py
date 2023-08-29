@@ -15,3 +15,9 @@ class Services (models.Model):
     
     class Meta:
         ordering = ['-created_data']
+
+class NewsLetter(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email
